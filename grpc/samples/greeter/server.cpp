@@ -39,7 +39,7 @@ class GreeterServiceImpl final : public Greeter::Service {
   }
 
   virtual grpc::Status SayManyHellos(
-      ::grpc_impl *context,
+      ::grpc_impl::ServerContext *context,
       const flatbuffers::grpc::Message<ManyHellosRequest> *request_msg,
       grpc::ServerWriter<flatbuffers::grpc::Message<HelloReply>> *writer)
       override {
